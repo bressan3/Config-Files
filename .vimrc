@@ -87,5 +87,8 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+"Enable forward delete"
+inoremap <C-d> <Del>
+nnoremap <C-d> <Del>
 "Change NERTree directory colors to red"
 hi Directory guifg=#FF0000 ctermfg=red
