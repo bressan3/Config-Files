@@ -7,23 +7,29 @@ Configuration steps:
 # ZSH
 
 - Move OR delete the original ~/.zshrc file to the ~/.dotfiles folder:
-""" mv ~/.zshrc ~/.dotfiles """
+
+`mv ~/.zshrc ~/.dotfiles`
 
 - Symlink the file:
-""" ln -s ~/.dotiles/.zshrc ~/.zshrc """
+
+`ln -s ~/.dotiles/.zshrc ~/.zshrc`
 
 # Vim
 
 - Move OR delete the original ~/.vimrc file to the ~/.dotfiles folder:
-""" mv ~/.vimrc ~/.dotfiles """
+
+`mv ~/.vimrc ~/.dotfiles`
 
 - Symlink the file:
-""" ln -s ~/.dotiles/.vimrc ~/.vimrc """
+
+`ln -s ~/.dotiles/.vimrc ~/.vimrc`
 
 # TMUX
 
 - Move OR delete the original ~/.tmux.conf file to the ~/.dotfiles folder:
-""" mv ~/.tmux.conf ~/.dotfiles """
+
+`mv ~/.tmux.conf ~/.dotfiles`
 
 - Symlink the file:
-""" ln -s ~/.dotiles/.tmux.conf ~/.tmux.conf """
+
+`ln -s ~/.dotiles/.tmux.conf ~/.tmux.conf`
