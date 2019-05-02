@@ -1,6 +1,8 @@
 General steps:
 
-1) Install Oh My ZSH
+1) Install and configure ZSH:
+
+https://medium.freecodecamp.org/jazz-up-your-zsh-terminal-in-seven-steps-a-visual-guide-e81a8fd59a38
 
 Configuration steps:
 
@@ -33,3 +35,7 @@ Configuration steps:
 - Symlink the file:
 
 `ln -s ~/.dotiles/.tmux.conf ~/.tmux.conf`
+
+# iTerm
+
+Go to `Preferences -> General`, select "Load preferences from a custom folder or URL:" and write `~/.dotfiles` in the field that becomes available.
