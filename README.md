@@ -4,6 +4,8 @@ General steps:
 
 https://medium.freecodecamp.org/jazz-up-your-zsh-terminal-in-seven-steps-a-visual-guide-e81a8fd59a38
 
+https://medium.com/the-code-review/make-your-terminal-more-colourful-and-productive-with-iterm2-and-zsh-11b91607b98c
+
 Configuration steps:
 
 # ZSH

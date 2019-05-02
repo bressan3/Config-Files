@@ -1,5 +1,5 @@
 set nocompatible              " be iMproved, required
-filetype off                  " required
+filetype plugin on            " required
 
 " VIM Color Scheme "
 colorscheme cobalt
@@ -26,6 +26,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 "Plugin 'tpope/vim-surround'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'c.vim' "See: https://wolfgangmehner.github.io/vim-plugins/csupport for more info 
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -72,6 +73,15 @@ set softtabstop=4   " Sets the number of columns for a TAB
 
 set expandtab       " Expand TABs to spaces    
 
+"YouCompleteMe settings"
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
+
+"CVim settings"
+let  g:C_UseTool_cmake    = 'yes'
+let  g:C_UseTool_doxygen = 'yes'
+
 "Custom button maps ------------------------------------------------------- >>
 
 "Change tabs
@@ -88,7 +98,7 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 "Enable forward delete"
-inoremap <C-d> <Del>
-nnoremap <C-d> <Del>
+"inoremap <C-d> <Del>
+"nnoremap <C-d> <Del>
 "Change NERTree directory colors to red"
 hi Directory guifg=#FF0000 ctermfg=red

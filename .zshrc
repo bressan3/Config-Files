@@ -1,3 +1,5 @@
+export TERM="xterm-256color"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -100,3 +102,16 @@ source $ZSH/oh-my-zsh.sh
 # Autojump stuff
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
+# Powerlevel9k (theme and fonts) config
+POWERLEVEL9K_MODE='nerdfont-complete'
+source  ~/powerlevel9k/powerlevel9k.zsh-theme
+
+POWERLEVEL9K_MODE='nerdfont-complete'
+source ~/powerlevel9k/powerlevel9k.zsh-theme
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh dir vcs newline status)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+
+# ColorLS settings
+source $(dirname $(gem which colorls))/tab_complete.sh
+alias lc='colorls'
