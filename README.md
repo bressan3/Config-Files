@@ -68,13 +68,13 @@ Go to `Preferences -> General`, select "Load preferences from a custom folder or
 
 4) Run:
 
-`$ cmake -G "Unix Makefiles" -DPATH_TO_LLVM_ROOT=~/ycm_temp/llvm_root_dir -DPYTHON_INCLUDE_DIR=/usr/local/Frameworks/Python.framework/Headers -DPYTHON_LIBRARY=/usr/local/Frameworks/Python.framework/Python . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp`
+```$ cmake -G "Unix Makefiles" -DPATH_TO_LLVM_ROOT=~/ycm_temp/llvm_root_dir -DPYTHON_INCLUDE_DIR=/usr/local/Frameworks/Python.framework/Headers -DPYTHON_LIBRARY=/usr/local/Frameworks/Python.framework/Python . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp```
 
 `$ cmake --build . --target ycm_core`
 
 5) Optional: Download [.ycm_extra_conf.py](https://github.com/Valloric/ycmd/blob/master/examples/.ycm_extra_conf.py), save it under `~/.vim` and then add the following line to your `.vimrc`:
 
-`
+```
 " YouCompleteMe settings
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py" 
-`
+```
