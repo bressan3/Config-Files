@@ -10,7 +10,7 @@ Configuration steps:
 
 # ZSH
 
-- Move OR delete the original ~/.zshrc file to the ~/.dotfiles folder:
+- Move the original ~/.zshrc file to the ~/.dotfiles folder:
 
 `mv ~/.zshrc ~/.dotfiles`
 
@@ -20,7 +20,7 @@ Configuration steps:
 
 # Vim
 
-- Move OR delete the original ~/.vimrc file to the ~/.dotfiles folder:
+- Move the original ~/.vimrc file to the ~/.dotfiles folder:
 
 `mv ~/.vimrc ~/.dotfiles`
 
@@ -38,7 +38,7 @@ Configuration steps:
 
 # TMUX
 
-- Move OR delete the original ~/.tmux.conf file to the ~/.dotfiles folder:
+- Move the original ~/.tmux.conf file to the ~/.dotfiles folder:
 
 `mv ~/.tmux.conf ~/.dotfiles`
 
@@ -53,6 +53,10 @@ Go to `Preferences -> General`, select "Load preferences from a custom folder or
 # OBS: YouCompleteMe:
 
 [clang_complete](https://github.com/Rip-Rip/clang_complete) must be installed for this plugin to work with C/C++
+
+This plugin cannot be setup correctly using a Homebrew installation of Python. In order to fix that do:
+
+`$ brew unlink python`
 
 1) Download [LLVM](http://releases.llvm.org/download.html) and place all of its inside contents (bin, include...) into ~/ycm_temp/llvm_root_dir/share/
 
