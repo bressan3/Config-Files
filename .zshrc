@@ -115,3 +115,10 @@ POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 # ColorLS settings
 source $(dirname $(gem which colorls))/tab_complete.sh
 alias lc='colorls'
+
+# Clang Path (to be used with calng_complete): Configure clang by running:
+# brew install llvm
+# $ LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
+# $ export LDFLAGS="-L/usr/local/opt/llvm/lib" 
+# $ export CPPFLAGS="-I/usr/local/opt/llvm/include" 
+export PATH="/usr/local/opt/llvm/bin:$PATH"

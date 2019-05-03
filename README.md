@@ -28,6 +28,14 @@ Configuration steps:
 
 `ln -s ~/.dotiles/.vimrc ~/.vimrc`
 
+- Move the original ~/.vim folder to the ~/.dotfiles folder:
+
+`mv ~/.vim ~/.dotfiles`
+
+- Symlink the folder:
+
+`ln -s ~/.dotfiles/.vim ~/.vim`
+
 # TMUX
 
 - Move OR delete the original ~/.tmux.conf file to the ~/.dotfiles folder:

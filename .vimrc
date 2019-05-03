@@ -13,20 +13,31 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-"Plugin 'Valloric/YouCompleteMe'
-Plugin 'scrooloose/nerdtree'
-
 "Vundle Plugins (DO NOT REMOVE!)
+Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
-"Plugin 'git://git.wincent.com/command-t.git'
-Plugin 'file:///home/gmarik/path/to/plugin'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-
-"Plugin 'klen/python-mode'
-"Plugin 'tpope/vim-surround'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'c.vim' "See: https://wolfgangmehner.github.io/vim-plugins/csupport for more info 
+
+" Utilsnips stuff ---------------------------------------------
+
+" Track the engine.
+Plugin 'SirVer/ultisnips'
+
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+" ------------------------------------------------------------
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -48,7 +59,6 @@ syntax on
 set tabstop=4
 set backspace=indent,eol,start
 set number
-let g:ycm_global_ycm_extra_conf = '/Users/Lucas/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 
 "Pathogen VIM"
 execute pathogen#infect()
@@ -73,14 +83,12 @@ set softtabstop=4   " Sets the number of columns for a TAB
 
 set expandtab       " Expand TABs to spaces    
 
-"YouCompleteMe settings"
-let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
-let g:ycm_key_list_select_completion=[]
-let g:ycm_key_list_previous_completion=[]
-
 "CVim settings"
 let  g:C_UseTool_cmake    = 'yes'
 let  g:C_UseTool_doxygen = 'yes'
+
+" Clang complete settings
+let g:clang_library_path='/usr/local/opt/llvm/lib'
 
 "Custom button maps ------------------------------------------------------- >>
 
