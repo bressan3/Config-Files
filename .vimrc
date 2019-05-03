@@ -20,6 +20,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'c.vim' "See: https://wolfgangmehner.github.io/vim-plugins/csupport for more info 
+Plugin 'Valloric/YouCompleteMe'
 
 " Utilsnips stuff ---------------------------------------------
 
@@ -30,14 +31,26 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
+" let g:UltiSnipsExpandTrigger="<c-t>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" Select snippet using the enter key
+let g:ulti_expand_or_jump_res = 0 "default value, just set once
+function! Ulti_ExpandOrJump_and_getRes()
+    call UltiSnips#ExpandSnippetOrJump()
+    return g:ulti_expand_or_jump_res
+endfunction
+
+inoremap <CR> <C-R>=(Ulti_ExpandOrJump_and_getRes() > 0)?"":"\n"<CR>
+
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 " ------------------------------------------------------------
 
+" YouCompleteMe settings
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py" 
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -87,7 +100,18 @@ set expandtab       " Expand TABs to spaces
 let  g:C_UseTool_cmake    = 'yes'
 let  g:C_UseTool_doxygen = 'yes'
 
-" Clang complete settings
+" Syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Clang / Clang_complete settings
+" path to directory where library can be found
 let g:clang_library_path='/usr/local/opt/llvm/lib'
 
 "Custom button maps ------------------------------------------------------- >>

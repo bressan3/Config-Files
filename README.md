@@ -49,3 +49,32 @@ Configuration steps:
 # iTerm
 
 Go to `Preferences -> General`, select "Load preferences from a custom folder or URL:" and write `~/.dotfiles` in the field that becomes available.
+
+# OBS: YouCompleteMe:
+
+[clang_complete](https://github.com/Rip-Rip/clang_complete) must be installed for this plugin to work with C/C++
+
+1) Download [LLVM](http://releases.llvm.org/download.html) and place all of its inside contents (bin, include...) into ~/ycm_temp/llvm_root_dir/share/
+
+2) Install [YouCompleteMe](https://github.com/Valloric/YouCompleteMe#mac-os-x) using Vundle and then:
+
+`$ cd ~/.vim/bundle/YouCompleteMe`
+
+`$ ./install.py --clang-completer`
+
+3) Create a new folder called `ycm_build` under `~` and do:
+
+`$ cd ~/ycm_build`
+
+4) Run:
+
+`$ cmake -G "Unix Makefiles" -DPATH_TO_LLVM_ROOT=~/ycm_temp/llvm_root_dir -DPYTHON_INCLUDE_DIR=/usr/local/Frameworks/Python.framework/Headers -DPYTHON_LIBRARY=/usr/local/Frameworks/Python.framework/Python . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp`
+
+`$ cmake --build . --target ycm_core`
+
+5) Optional: Download [.ycm_extra_conf.py](https://github.com/Valloric/ycmd/blob/master/examples/.ycm_extra_conf.py), save it under `~/.vim` and then add the following line to your `.vimrc`:
+
+`
+" YouCompleteMe settings
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py" 
+`
