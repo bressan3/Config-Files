@@ -116,6 +116,9 @@ POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 source $(dirname $(gem which colorls))/tab_complete.sh
 alias lc='colorls'
 
+# MVim alias
+alias vim='mvim -v'
+
 # Clang Path (to be used with calng_complete): Configure clang by running:
 # brew install llvm
 # $ LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"

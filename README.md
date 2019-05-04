@@ -24,6 +24,10 @@ Configuration steps:
 
 `mv ~/.vimrc ~/.dotfiles`
 
+Check if both Macvim and Vim were previously installed using Homebrew. If that's the case do:
+
+`$ brew uninstall vim`
+
 - Symlink the file:
 
 `ln -s ~/.dotiles/.vimrc ~/.vimrc`
