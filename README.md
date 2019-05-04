@@ -58,7 +58,7 @@ This plugin cannot be setup correctly using a Homebrew installation of Python. I
 
 `$ brew unlink python`
 
-1) Download [LLVM](http://releases.llvm.org/download.html) and place all of its inside contents (bin, include...) into ~/ycm_temp/llvm_root_dir/share/
+1) Download [LLVM](http://releases.llvm.org/download.html) and place all of its inside contents (bin, include...) inside ~/ycm_temp/llvm_root_dir
 
 2) Install [YouCompleteMe](https://github.com/Valloric/YouCompleteMe#mac-os-x) using Vundle and then:
 
