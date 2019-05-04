@@ -20,13 +20,13 @@ Configuration steps:
 
 # Vim
 
-- Move the original ~/.vimrc file to the ~/.dotfiles folder:
-
-`mv ~/.vimrc ~/.dotfiles`
-
 Check if both Macvim and Vim were previously installed using Homebrew. If that's the case do:
 
 `$ brew uninstall vim`
+
+- Move the original ~/.vimrc file to the ~/.dotfiles folder:
+
+`mv ~/.vimrc ~/.dotfiles`
 
 - Symlink the file:
 
@@ -58,6 +58,10 @@ Go to `Preferences -> General`, select "Load preferences from a custom folder or
 
 [clang_complete](https://github.com/Rip-Rip/clang_complete) must be installed for this plugin to work with C/C++
 
+This plugin only works with C/C++, when LLVM is installed:
+
+`$ brew install llvm`
+
 This plugin cannot be setup correctly using a Homebrew installation of Python. In order to fix that do:
 
 `$ brew unlink python`
@@ -76,7 +80,11 @@ This plugin cannot be setup correctly using a Homebrew installation of Python. I
 
 4) Run:
 
-```$ cmake -G "Unix Makefiles" -DPATH_TO_LLVM_ROOT=~/ycm_temp/llvm_root_dir -DPYTHON_INCLUDE_DIR=/usr/local/Frameworks/Python.framework/Headers -DPYTHON_LIBRARY=/usr/local/Frameworks/Python.framework/Python . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp```
+```
+$ cmake -G "Unix Makefiles" -DPATH_TO_LLVM_ROOT=~/ycm_temp/llvm_root_dir 
+-DPYTHON_INCLUDE_DIR=/usr/local/Frameworks/Python.framework/Headers 
+-DPYTHON_LIBRARY=/usr/local/Frameworks/Python.framework/Python . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
+```
 
 `$ cmake --build . --target ycm_core`
 
