@@ -51580,11 +51580,11 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>-1266 228 606 469 -1920 0 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>459 417 796 486 0 0 2048 1129 </string>
+	<string>-1508 478 958 470 -1920 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-800 552 800 577 -800 552 800 577 </string>
+	<string>-1543 102 1362 955 -1920 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>-1645 23 1354 1019 -1920 0 1920 1057 </string>
+	<string>-1623 198 1354 859 -1920 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>-1652 84 1354 859 -1920 0 1920 1057 </string>
 	<key>New Bookmarks</key>
@@ -52370,6 +52370,8 @@
 			<string></string>
 			<key>Silence Bell</key>
 			<false/>
+			<key>Smart Cursor Color</key>
+			<false/>
 			<key>Sync Title</key>
 			<false/>
 			<key>Tags</key>
@@ -52386,6 +52388,8 @@
 			<true/>
 			<key>Use Bright Bold</key>
 			<true/>
+			<key>Use Cursor Guide</key>
+			<false/>
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Use Non-ASCII Font</key>
@@ -52416,6 +52420,8 @@
 	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>527814907.72349399</real>
+	<key>PMPrintingExpandedStateForPrint2</key>
+	<false/>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -52451,6 +52457,8 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>~/.dotfiles</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>SUAutomaticallyUpdate</key>
 	<true/>
 	<key>SUEnableAutomaticChecks</key>
@@ -52462,7 +52470,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-05-03T05:29:38Z</date>
+	<date>2019-05-04T08:23:52Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
