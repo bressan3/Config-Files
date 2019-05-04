@@ -21,6 +21,7 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'c.vim' "See: https://wolfgangmehner.github.io/vim-plugins/csupport for more info 
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'ervandew/supertab'
 
 " Utilsnips stuff ---------------------------------------------
 
@@ -31,19 +32,9 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-" let g:UltiSnipsExpandTrigger="<c-t>"
+let g:UltiSnipsExpandTrigger="<c-x>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-" Select snippet using the enter key
-let g:ulti_expand_or_jump_res = 0 "default value, just set once
-function! Ulti_ExpandOrJump_and_getRes()
-    call UltiSnips#ExpandSnippetOrJump()
-    return g:ulti_expand_or_jump_res
-endfunction
-
-inoremap <CR> <C-R>=(Ulti_ExpandOrJump_and_getRes() > 0)?"":"\n"<CR>
-
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
@@ -51,6 +42,7 @@ let g:UltiSnipsEditSplit="vertical"
 
 " YouCompleteMe settings
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py" 
+let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -114,8 +106,15 @@ let g:syntastic_check_on_wq = 0
 " path to directory where library can be found
 let g:clang_library_path='/usr/local/opt/llvm/lib'
 
+" Limit popup menu height
+set pumheight=20
+
+"--------------------------------------------------------------------------
+
 "Custom button maps ------------------------------------------------------- >>
 
+" Opens the omni suggestions (local functions, language tokens...) popup
+imap <C-@> <c-x><c-o>
 "Change tabs
 nnoremap <C-u> :tabprevious<CR>
 nnoremap <C-i> :tabnext<CR>
@@ -132,5 +131,6 @@ nnoremap <c-l> <c-w>l
 "Enable forward delete"
 "inoremap <C-d> <Del>
 "nnoremap <C-d> <Del>
+
 "Change NERTree directory colors to red"
 hi Directory guifg=#FF0000 ctermfg=red
