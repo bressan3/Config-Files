@@ -1,4 +1,4 @@
-set nocompatible              " be iMproved, required
+set nocompatible 
 filetype plugin on            " required
 
 " VIM Color Scheme "
@@ -12,7 +12,6 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
 "Vundle Plugins (DO NOT REMOVE!)
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
@@ -22,6 +21,15 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'c.vim' "See: https://wolfgangmehner.github.io/vim-plugins/csupport for more info 
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'ervandew/supertab'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+
+set nocompatible
+syntax on
+set tabstop=4
+set backspace=indent,eol,start
+set number
 
 " Utilsnips stuff ---------------------------------------------
 
@@ -44,27 +52,6 @@ let g:UltiSnipsEditSplit="vertical"
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py" 
 let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
-set nocompatible
-syntax on
-set tabstop=4
-set backspace=indent,eol,start
-set number
-
 "Pathogen VIM"
 execute pathogen#infect()
 
@@ -77,16 +64,14 @@ if has('autocmd')
 		  autocmd GUIEnter * set visualbell t_vb=
 endif
 
+set mouse=a
 set tabstop=4       " The width of a TAB is set to 4.
-                    " Still it is a \t. It is just that
-                    " Vim will interpret it to be having
-                    " a width of 4.
-
 set shiftwidth=4    " Indents will have a width of 4
-
 set softtabstop=4   " Sets the number of columns for a TAB
-
 set expandtab       " Expand TABs to spaces    
+set autoindent
+set smartindent
+set cindent 
 
 "CVim settings"
 let  g:C_UseTool_cmake    = 'yes'
@@ -122,15 +107,11 @@ nnoremap <C-i> :tabnext<CR>
 silent! map <C-o> :NERDTreeFind<CR>
 "Toggle NERDTree
 silent! map <C-p> :NERDTreeToggle<CR>
-"CHANGE SPLITS: CTRL-W-W"
-"Navigate through splits (up, down, left right)"
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
-"Enable forward delete"
-"inoremap <C-d> <Del>
-"nnoremap <C-d> <Del>
+
+" Open a new vertical split
+nnoremap <C-\> :vsp<CR>
+" Open a new horizontal split
+nnoremap <C-_> :sp<CR>
 
 "Change NERTree directory colors to red"
 hi Directory guifg=#FF0000 ctermfg=red

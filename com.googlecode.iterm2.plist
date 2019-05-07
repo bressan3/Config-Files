@@ -51580,11 +51580,11 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>-1266 228 606 469 -1920 0 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>-1508 478 958 470 -1920 0 1920 1057 </string>
+	<string>459 629 928 394 0 0 2048 1129 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-1543 102 1362 955 -1920 0 1920 1057 </string>
+	<string>-1619 23 1338 1034 -1920 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>-1623 198 1354 859 -1920 0 1920 1057 </string>
+	<string>364 270 1354 859 0 0 2048 1129 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>-1652 84 1354 859 -1920 0 1920 1057 </string>
 	<key>New Bookmarks</key>
@@ -51815,12 +51815,16 @@
 			</dict>
 			<key>Cursor Text Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.0940093994140625</real>
+				<real>0.0</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
 				<real>0.0</real>
 				<key>Red Component</key>
-				<real>1</real>
+				<real>0.0</real>
 			</dict>
 			<key>Cursor Type</key>
 			<integer>2</integer>
