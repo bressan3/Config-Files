@@ -8,6 +8,12 @@ https://medium.com/the-code-review/make-your-terminal-more-colourful-and-product
 
 Configuration steps:
 
+# Neovim
+
+ - Place init.vim under ~/.config/nvim
+ - Clone Vundle.vim into ~/.config/nvim/bunlde/Vundle.vim
+ `$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/nvim/bundle/Vundle.vim`
+
 # ZSH
 
 - Move the original ~/.zshrc file to the ~/.dotfiles folder:
